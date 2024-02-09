@@ -1,0 +1,17 @@
+{
+  "name": "wednesday",
+  "version": "1.0.0",
+  "description": "This is a project to post an image every Wednesday integrated with Amazon",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.2",
+    "mastodon": "^1.2.2",
+    "moment": "^2.30.1"
+  }
+}

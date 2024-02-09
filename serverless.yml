@@ -1,0 +1,20 @@
+service: wednesday-js
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: us-east-2
+  deploymentBucket:
+    name: wednesday-deployer
+
+functions:
+  wednesday-js:
+    handler: index.handler
+    environment:
+      MASTODON_ACCESS_KEY: ${env:MASTODON_ACCESS_KEY}
+
+package:
+  individually: true
+  excludeDevDependencies: false
+  include:
+    - "./src/**/"
