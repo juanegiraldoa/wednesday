@@ -34,4 +34,4 @@ jobs:
         run: aws lambda update-function-code --function-name wednesday --zip-file fileb://deployment-package.zip
 
       - name: Setup Variables
-        run: aws lambda update-function-configuration --function-name wednesday --environment "Variables={MASTODON_ACCESS_KEY='${{ secrets.AWS_REGION }}'";
+        run: aws lambda update-function-configuration --function-name wednesday --environment "Variables={MASTODON_ACCESS_KEY=${{ secrets.AWS_REGION }}";
