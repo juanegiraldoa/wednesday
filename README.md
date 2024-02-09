@@ -1,4 +1,4 @@
-This is a project to post an image every Wednesday integrated with Amazon
+This project post an image every Wednesday integrated with AWS Lambda
 
 #### Enviroment variables required
 
