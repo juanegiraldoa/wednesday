@@ -32,6 +32,9 @@ jobs:
           
       - name: Update Lambda environment variables
         run: aws lambda update-function-configuration --function-name wednesday --environment Variables="{MASTODON_ACCESS_KEY=${{ secrets.MASTODON_ACCESS_KEY }}}"
+
+      - name: Sleep five seconds
+        run: sleep 5
       
       - name: Deploy to Lambda
         run: aws lambda update-function-code --function-name wednesday --zip-file fileb://deployment-package.zip
