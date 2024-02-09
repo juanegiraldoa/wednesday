@@ -3,5 +3,5 @@ This is a project to post an image every Wednesday integrated with Amazon
 #### Enviroment variables required
 
 ```
-MASTODON_ACCESS_KEY=<mastodo-access-key>
+MASTODON_ACCESS_KEY=<mastodon-access-key>
 ```
