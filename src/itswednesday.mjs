@@ -12,11 +12,10 @@ export const postWednesday = async () => {
     const { data } = await client.get("timelines/home", { limit: 1 });
     const lastPostDate = moment(data[0].created_at).format(DATE_FORMAT);
     if (lastPostDate !== moment().format(DATE_FORMAT)) {
-      const media = {
+      const response = await client.post("media", {
         file: fs.createReadStream(ROUTE_WEDNESDAY),
         description: "It is wednesdat, my dudes. Big fat frog.",
-      };
-      const response = await client.post("media", media);
+      });
       client.post("statuses", { media_ids: [response.data.id] });
       return "It's Wednesday My Dudes";
     } else return "Already Posted My Dude";
