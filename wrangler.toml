@@ -5,5 +5,5 @@ compatibility_date = "2024-04-05"
 compatibility_flags = ["nodejs_compat"]
 
 [vars]
-MASTODON_TOKEN
-MASTODON_WEDNESDAY_DUDE_MEDIA
+MASTODON_TOKEN =
+MASTODON_WEDNESDAY_DUDE_MEDIA =
