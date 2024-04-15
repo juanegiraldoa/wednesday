@@ -7,3 +7,6 @@ compatibility_flags = ["nodejs_compat"]
 [vars]
 MASTODON_TOKEN = "J_DPBhWeklP_RNirnbtFH-SIFYJtwv9CJ8Bjyog_xrY"
 MASTODON_WEDNESDAY_DUDE_MEDIA = "112271920451061861"
+
+[triggers]
+crons = [ "0 8 * * wed" ]
