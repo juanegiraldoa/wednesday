@@ -4,5 +4,4 @@ This project post an image every Wednesday integrated with Cloudflare Workers
 
 ```
 MASTODON_ACCESS_KEY=<mastodon-access-key>
-MASTODON_WEDNESDAY_DUDE_MEDIA=<mastodon-wednesday-dude-id-media>
 ```
