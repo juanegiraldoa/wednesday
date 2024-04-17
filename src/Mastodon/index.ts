@@ -16,4 +16,13 @@ const postStatus = async (token: string, media_ids: string) => {
 	return await response.json();
 };
 
-export { getTimeLine, postStatus };
+const uploadMedia = async (token: string, media: any) => {
+	const FINAL_URL = `${BASE_URL}/media`;
+	let formData = new FormData();
+	formData.append('file', media, 'wednesday.jpg');
+	formData.append('description', 'It is wednesdat, my dudes. Big fat frog.');
+	const response = await fetch(FINAL_URL, { headers: getHeaders(token), body: formData, method: 'POST' });
+	return await response.json();
+};
+
+export { getTimeLine, postStatus, uploadMedia };

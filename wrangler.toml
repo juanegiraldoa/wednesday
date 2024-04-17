@@ -10,3 +10,7 @@ MASTODON_WEDNESDAY_DUDE_MEDIA = "112288098480431582"
 
 [triggers]
 crons = [ "0 8 * * wed" ]
+
+[[r2_buckets]]
+binding = 'RESOURCES'
+bucket_name = 'resources'
