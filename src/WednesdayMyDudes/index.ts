@@ -3,7 +3,7 @@ import { getTimeLine, postStatus, uploadMedia } from '../Mastodon';
 
 const DATE_FORMAT = 'YYYY-MM-DD';
 
-const postOnWednesday = async (token: string, media_ids: string, resources: R2Bucket) => {
+const postOnWednesday = async (token: string, resources: R2Bucket) => {
 	if (moment().day() === 3) {
 		const [lastPost]: any = await getTimeLine(token);
 		const lastPostDate = lastPost ? moment(lastPost.created_at).format(DATE_FORMAT) : null;
