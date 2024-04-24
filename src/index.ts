@@ -2,7 +2,6 @@ import { postOnWednesday } from './WednesdayMyDudes';
 
 export interface Env {
 	MASTODON_TOKEN: string;
-	MASTODON_WEDNESDAY_DUDE_MEDIA: string;
 	RESOURCES: R2Bucket;
 }
 

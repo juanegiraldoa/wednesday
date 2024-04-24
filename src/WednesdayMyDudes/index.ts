@@ -4,7 +4,7 @@ const postOnWednesday = async (token: string, resources: R2Bucket) => {
 	const now = new Date();
 	if (now.getDay() === 3) {
 		const [lastPost]: any = await getTimeLine(token);
-		if (!!lastPost && lastPost.created_at !== now.toISOString()) {
+		if (!lastPost || new Date(lastPost.created_at).getDate() !== now.getDate()) {
 			const image = await resources.get('wednesday.jpg');
 			if (image === null) return;
 			const { id }: any = await uploadMedia(token, await image.blob());
