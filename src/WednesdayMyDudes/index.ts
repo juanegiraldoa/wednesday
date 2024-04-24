@@ -1,13 +1,10 @@
-import moment from 'moment';
 import { getTimeLine, postStatus, uploadMedia } from '../Mastodon';
 
-const DATE_FORMAT = 'YYYY-MM-DD';
-
 const postOnWednesday = async (token: string, resources: R2Bucket) => {
-	if (moment().day() === 3) {
+	const now = new Date();
+	if (now.getDay() === 3) {
 		const [lastPost]: any = await getTimeLine(token);
-		const lastPostDate = lastPost ? moment(lastPost.created_at).format(DATE_FORMAT) : null;
-		if (!lastPostDate && lastPostDate !== moment().format(DATE_FORMAT)) {
+		if (!!lastPost && lastPost.created_at !== now.toISOString()) {
 			const image = await resources.get('wednesday.jpg');
 			if (image === null) return;
 			const { id }: any = await uploadMedia(token, await image.blob());
