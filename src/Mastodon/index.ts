@@ -16,11 +16,11 @@ const postStatus = async (token: string, media_ids: string) => {
 	return await response.json();
 };
 
-const uploadMedia = async (token: string, media: any) => {
+const uploadMedia = async (token: string, media: Blob, description: string) => {
 	const FINAL_URL = `${BASE_URL}/media`;
 	let formData = new FormData();
 	formData.append('file', media, 'wednesday.jpg');
-	formData.append('description', 'It is wednesdat, my dudes. Big fat frog.');
+	formData.append('description', description);
 	const response = await fetch(FINAL_URL, { headers: getHeaders(token), body: formData, method: 'POST' });
 	return await response.json();
 };
