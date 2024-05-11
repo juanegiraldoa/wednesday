@@ -17,3 +17,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          secrets: |
+            MASTODON_TOKEN
+        env:
+          MASTODON_TOKEN: ${{ secrets.MASTODON_ACCESS_KEY }}
