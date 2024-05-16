@@ -5,7 +5,7 @@ compatibility_date = "2024-04-05"
 compatibility_flags = ["nodejs_compat"]
 
 [triggers]
-crons = [ "0 8 * * wed" ]
+crons = [ "0 12 * * wed" ]
 
 [[r2_buckets]]
 binding = 'RESOURCES'
