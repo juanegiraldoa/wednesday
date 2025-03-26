@@ -1,15 +1,15 @@
 {
-  "name": "wednesday",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "deploy": "wrangler deploy",
-    "dev": "wrangler dev",
-    "start": "wrangler dev"
-  },
-  "devDependencies": {
-    "@cloudflare/workers-types": "4.20250321.0",
-    "typescript": "5.8.2",
-    "wrangler": "4.4.0"
-  }
+	"name": "wednesday",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"deploy": "wrangler deploy",
+		"dev": "wrangler dev",
+		"start": "wrangler dev"
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "4.20250321.0",
+		"typescript": "5.8.2",
+		"wrangler": "4.4.0"
+	}
 }
