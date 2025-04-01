@@ -12,16 +12,18 @@ const wednesdayPosts = {
 const postOnWednesday = async (token: string, resources: R2Bucket) => {
 	const now = new Date();
 	if (now.getUTCDay() === 3) {
-		const [lastPost]: any = await getTimeLine(token);
+		const [lastPost] = (await getTimeLine(token)) as { created_at: string }[];
 		if (!lastPost || new Date(lastPost.created_at).getDate() !== now.getDate()) {
 			const info = getImageInfo(now);
 			const image = await resources.get(info.image);
 			if (image === null) return 'Wednesday Not Found';
-			const { id }: any = await uploadMedia(token, await image.blob(), info.description);
+			const { id } = (await uploadMedia(token, await image.blob(), info.description)) as { id: string };
 			await postStatus(token, id);
 			return "It's Wednesday My Dudes";
-		} else return 'Already Posted My Dude';
-	} else return "It's Not Wednesday My Dudes";
+		}
+		return 'Already Posted My Dude';
+	}
+	return "It's Not Wednesday My Dudes";
 };
 
 const getImageInfo = (date: Date) => {
