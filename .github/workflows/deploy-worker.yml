@@ -34,3 +34,5 @@ jobs:
             MASTODON_TOKEN
         env:
           MASTODON_TOKEN: ${{ secrets.MASTODON_ACCESS_KEY }}
+          BSKY_IDENTIFIER: ${{ secrets.BSKY_IDENTIFIER }}
+          BSKY_PASSWORD: ${{ secrets.BSKY_PASSWORD }}
