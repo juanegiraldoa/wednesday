@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       '@atproto/api':
-        specifier: ^0.14.16
+        specifier: 0.14.16
         version: 0.14.16
     devDependencies:
       '@biomejs/biome':
