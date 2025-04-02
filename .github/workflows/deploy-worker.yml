@@ -32,6 +32,8 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           secrets: |
             MASTODON_TOKEN
+            BSKY_IDENTIFIER
+            BSKY_PASSWORD
         env:
           MASTODON_TOKEN: ${{ secrets.MASTODON_ACCESS_KEY }}
           BSKY_IDENTIFIER: ${{ secrets.BSKY_IDENTIFIER }}
