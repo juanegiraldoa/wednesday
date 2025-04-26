@@ -1,0 +1,14 @@
+{
+  "default": {
+    "image": "wednesday.jpg",
+    "description": "It is Wednesday, my dudes. Big fat frog."
+  },
+  "octoberWednesday": {
+    "image": "october-wednesday.jpg",
+    "description": "It is Wednesday, my dudes. Big skeleton frog."
+  },
+  "lastOctoberWednesday": {
+    "image": "spoktober-wednesday.jpg",
+    "description": "It is Hallowednesday, my doots. Big skeleton frog with trumpet."
+  }
+}
