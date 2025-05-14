@@ -1,4 +1,4 @@
-import { postOnWednesday } from './WednesdayMyDudes';
+import { Wednesday } from './Wednesday';
 
 export interface Env {
   MASTODON_TOKEN: string;
@@ -9,9 +9,11 @@ export interface Env {
 
 export default {
   // async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
-  // 	return new Response(await postOnWednesday(env));
+  //   const wednesday = new Wednesday(env);
+  //   return new Response(await wednesday.post());
   // },
-  async scheduled(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
-    return new Response(await postOnWednesday(env));
+  async scheduled(_request: Request, env: Env, _ctx: ExecutionContext): Promise<Response> {
+    const wednesday = new Wednesday(env);
+    return new Response(await wednesday.post());
   },
 };
