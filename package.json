@@ -2,7 +2,7 @@
 	"name": "wednesday",
 	"version": "1.0.0",
 	"private": true,
-	"packageManager": "pnpm@10.7.1",
+	"packageManager": "pnpm@10.11.0",
 	"scripts": {
 		"deploy": "wrangler deploy",
 		"dev": "wrangler dev",
@@ -13,11 +13,11 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
-		"@cloudflare/workers-types": "4.20250327.0",
-		"typescript": "5.8.2",
-		"wrangler": "4.6.0"
+		"@cloudflare/workers-types": "4.20250514.0",
+		"typescript": "5.8.3",
+		"wrangler": "4.14.4"
 	},
 	"dependencies": {
-		"@atproto/api": "0.14.16"
+		"@atproto/api": "0.15.6"
 	}
 }
